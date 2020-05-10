@@ -2,10 +2,13 @@
   #app
     img.bg(src='@/assets/bg.jpg')
     .content
+      //- h1.logo Virtual <span class='space'/> Arcadia
+      //- p.logo - Online Music Festival -
       #nav
         router-link(to='/') HOME
         router-link(to='/set-times') SET TIMES
         router-link(to='/lineup') LINEUP
+        a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target="_blank") DONATE
       router-view
 </template>
 
@@ -24,6 +27,13 @@ a:hover
   text-decoration: none
 p
   margin: 10px 0px
+  font-weight: 600
+h1
+  text-transform: uppercase
+  font-family: serif
+span.space
+  display: inline-block
+  width: 0px
 
 img.bg
   opacity: 0.5
@@ -36,14 +46,15 @@ img.bg
   z-index: -1
 
 #nav
-  padding: 30px
+  margin-top: 30px
+  margin-bottom: 50px
   a
-    font-weight: bold
+    font-weight: 600
     color: #ffffff
     margin: 10px
     padding: 2px 5px
     text-decoration: none
-    &.router-link-exact-active
+    &.router-link-exact-active, &:active
       color: #000000
       background-color: white
 </style>

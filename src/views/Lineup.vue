@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang='sass'>
+<style lang='sass' scoped>
 .page
   width: 550px
   text-transform: uppercase
