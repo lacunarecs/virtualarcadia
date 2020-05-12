@@ -9,7 +9,7 @@
         router-link(to='/set-times') SET TIMES
         router-link(to='/lineup') LINEUP
         a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target="_blank") DONATE
-      router-view
+      router-view.router-view
 </template>
 
 <style lang="sass">
@@ -57,4 +57,6 @@ img.bg
     &.router-link-exact-active, &:active
       color: #000000
       background-color: white
+.router-view
+  margin-bottom: 50px
 </style>
