@@ -1,44 +1,50 @@
 <template lang='pug'>
 .page
-  p {{ timezoneText }}
+  .tz
+    //- p {{ tz.label }}
+    vSelect.tz-select(
+      v-model='tz'
+      :options='timezones'
+      :clearable='false'
+      ref='select'
+    )
+      template(#open-indicator='{ attributes }')
+        span(v-bind='attributes')
+          Edit2Icon.edit-icon(size='1x' @click='console.log($refs.select)')
   .set-times
     .col(v-for='day in setTimesByDay')
       h1 {{ day.weekday }}
       template(v-for='setTime in day.setTimes')
         SetTime(:artist='setTime.artist' :time='setTime.time')
-    //- .col
-    //-   h1 FRI
-    //-   SetTime(artist='Fytch' time='May 22 2020 12:00 PM')
-    //-   SetTime(artist='Fytch' time='May 22 2020 12:00 PM')
-    //-   SetTime(artist='Fytch' time='May 22 2020 12:00 PM')
-    //-   SetTime(artist='Fytch' time='May 22 2020 12:00 PM')
-    //- .col
-    //-   h1 SAT
-    //-   SetTime(artist='Fytch' time='May 22 2020 12:00 PM')
-    //- .col
-    //-   h1 SUN
-    //-   SetTime(artist='Fytch' time='May 22 2020 12:00 PM')
 </template>
 
 <script>
 import SetTime from '@/components/SetTime.vue'
 
 import moment from 'moment-timezone'
-import Dropdown from 'vue-simple-search-dropdown'
+import vSelect from 'vue-select'
+import 'vue-select/dist/vue-select.css'
+import { Edit2Icon } from 'vue-feather-icons'
 
 export default {
   title: 'Virtual Arcadia Set Times',
   components: {
     SetTime,
-    Dropdown
+    vSelect,
+    Edit2Icon
   },
   data: function () {
+    const tzGuess = moment.tz.guess(true)
     return {
-      timezone: moment.tz.guess(true),
-      timezones: moment.tz.names().map((tzName, i) => {
+      tz: {
+        name: tzGuess,
+        label: `${tzGuess} (${moment.tz.zone(tzGuess).abbr(1590098400000)})`
+      },
+      timezones: moment.tz.names().map(tz => {
+        const tzText = `${tz} (${moment.tz.zone(tz).abbr(1590098400000)})`
         return {
-          id: i,
-          name: tzName
+          name: tz,
+          label: tzText
         }
       })
     }
@@ -93,7 +99,8 @@ export default {
       ]
       const setTimesByDay = []
       for (const utcSetTime of utcSetTimes) {
-        const time = moment.utc(utcSetTime.time, 'MMM D HH:mm').year(2020)
+        const utcTime = moment.utc(utcSetTime.time, 'MMM D HH:mm').year(2020)
+        const time = utcTime.tz(this.tz.name)
         const ymd = time.format('YYYY-MM-DD')
         const latestDay = setTimesByDay[setTimesByDay.length - 1]
         if (latestDay && latestDay.ymd === ymd) {
@@ -112,25 +119,54 @@ export default {
         }
       }
       return setTimesByDay
-    },
-    timezoneText () {
-      return `${this.timezone} (${moment.tz.zone(this.timezone).abbr(1590098400000)})`
-    }
-  },
-  methods: {
-    setTimezone (timezone) {
-      this.timezone = `${timezone} (${moment.tz.zone(timezone).abbr(1590098400000)})`
     }
   }
 }
 </script>
 
+<style lang='sass'>
+.tz-select
+  // width: 350px
+  font-weight: 600
+  .vs__dropdown-toggle
+    cursor: pointer
+    border: none
+    .vs__search
+      font-weight: 600
+      color: #ffffff
+    .vs__selected
+      color: #ffffff
+    .vs1__combobox
+      border: none
+    .vs__open-indicator
+      display: flex
+      .edit-icon
+        display: block
+  &:not(.vs--open)
+    .vs__search
+      padding-left: 0px
+      padding-right: 0px
+      margin-left: 0px
+      margin-right: 0px
+      border: none
+  &.vs--open
+    width: 350px
+    .vs__dropdown-toggle
+      cursor: text
+    .vs__open-indicator
+      transform: none
+</style>
 <style lang='sass' scoped>
+.tz
+  display: flex
+  align-items: center
+  justify-content: center
 .set-times
   display: flex
   margin: auto
   max-width: 1000px
   justify-content: space-between
+  padding: 0px 10px
   .col
     width: 220px
     margin: 0px 20px

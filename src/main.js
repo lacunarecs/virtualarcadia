@@ -22,6 +22,8 @@ Vue.use(MetaPlugin, {
   titleTemplate: '%s'
 })
 
+Vue.prototype.console = console
+
 new Vue({
   router,
   render: h => h(App)

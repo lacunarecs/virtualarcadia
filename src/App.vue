@@ -22,6 +22,8 @@ body
   -moz-osx-font-smoothing: grayscale
   text-align: center
   color: #ffffff
+  position: relative
+  padding: 1px // avoid collapsed margins
 
 a:hover
   text-decoration: none
@@ -42,11 +44,10 @@ img.bg
   top: 0px
   left: 0px
   width: 100%
-  height: 100%
   z-index: -1
 
 #nav
-  margin-top: 30px
+  margin-top: 30px // avoid margin so body is full size
   margin-bottom: 50px
   a
     font-weight: 600
