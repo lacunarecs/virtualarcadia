@@ -162,14 +162,16 @@ export default {
   align-items: center
   justify-content: center
 .set-times
-  display: flex
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto))
+  justify-content: space-evenly
+  grid-gap: 20px
   margin: auto
-  max-width: 1000px
-  justify-content: space-between
-  padding: 0px 10px
+  max-width: 1100px
+  padding: 0px 20px
   .col
-    width: 220px
-    margin: 0px 20px
+    width: 100%
+    // max-width: 10%
     h1
       margin-top: 0px
 </style>
