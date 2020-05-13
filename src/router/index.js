@@ -21,6 +21,12 @@ const routes = [
     component: Lineup
   },
   {
+    path: '/donate',
+    beforeEnter: (to, from, next) => {
+      window.location = 'https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748'
+    }
+  },
+  {
     path: '*',
     name: '404',
     component: PageNotFound

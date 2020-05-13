@@ -8,7 +8,7 @@
         router-link(to='/') HOME
         router-link(to='/set-times') SET TIMES
         router-link(to='/lineup') LINEUP
-        a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target="_blank") DONATE
+        router-link(to='/donate') DONATE
       router-view.router-view
 </template>
 
@@ -47,6 +47,9 @@ img.bg
   z-index: -1
 
 #nav
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
   margin-top: 30px // avoid margin so body is full size
   margin-bottom: 50px
   a
@@ -55,6 +58,7 @@ img.bg
     margin: 10px
     padding: 2px 5px
     text-decoration: none
+    white-space: nowrap
     &.router-link-exact-active, &:active
       color: #000000
       background-color: white
