@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Lineup from '../views/Lineup.vue'
-import SetTimes from '../views/SetTimes.vue'
-import PageNotFound from '../views/PageNotFound.vue'
+import Home from '@/views/Home.vue'
+import Lineup from '@/views/Lineup.vue'
+import SetTimes from '@/views/SetTimes.vue'
+import Giveaway from '@/views/Giveaway.vue'
+import PageNotFound from '@/views/PageNotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -19,6 +20,10 @@ const routes = [
   {
     path: '/lineup',
     component: Lineup
+  },
+  {
+    path: '/giveaway',
+    component: Giveaway
   },
   {
     path: '/donate',

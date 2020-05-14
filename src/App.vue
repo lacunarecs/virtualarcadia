@@ -1,15 +1,15 @@
 <template lang='pug'>
   #app
     img.bg(src='@/assets/bg.jpg')
-    .content
-      //- h1.logo Virtual <span class='space'/> Arcadia
-      //- p.logo - Online Music Festival -
-      #nav
-        router-link(to='/') HOME
-        router-link(to='/set-times') SET TIMES
-        router-link(to='/lineup') LINEUP
-        router-link(to='/donate') DONATE
-      router-view.router-view
+    //- h1.logo Virtual <span class='space'/> Arcadia
+    //- p.logo - Online Music Festival -
+    #nav
+      router-link(to='/') HOME
+      router-link(to='/set-times') SET TIMES
+      router-link(to='/lineup') LINEUP
+      a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target='_blank') DONATE
+      router-link(to='/giveaway') GIVEAWAY
+    router-view.router-view
 </template>
 
 <style lang="sass">
