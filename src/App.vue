@@ -67,6 +67,10 @@ img.bg
     justify-content: center
     a
       margin: 10px 2px
+      &.router-link-exact-active, &:active
+        color: #ffffff
+        background-color: transparent
+        opacity: 0.7
       svg
         display: block
   a
