@@ -4,9 +4,9 @@ div
   //- p Donate 20$ or more and get a chance of winning one of 5 Razer Hammerhead True Wireless Earbuds.
   img(src='@/assets/razer-giveaway.jpg')
   br
-  a(href='http://rzr.to/virtualarcadia')
+  a(target='_blank' href='http://rzr.to/virtualarcadia')
     p.hammerhead-link Click here to check out the Razer Hammerhead True Wireless
-  a(href='https://gleam.io/zMdsl/virtual-arcadia-razer-giveaway' target='_blank')
+  a(target='_blank' href='https://gleam.io/zMdsl/virtual-arcadia-razer-giveaway')
     button(v-if='!continued' type='button') ENTER
   //- a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target='_blank')
   //-   button(v-if='!continued' type='button') DONATE
