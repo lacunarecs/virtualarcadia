@@ -29,6 +29,7 @@
       span Lammer
       span Lizzy Jane
       span Loopers
+      span MAHALO
       span Miles Away
       span N3wport
       span NIVIRO
