@@ -69,7 +69,7 @@ export default {
   flex-direction: column
   align-items: center
   .lineup
-    width: 562px
+    width: 550px
     text-transform: uppercase
     font-weight: 600
     font-size: 18px
@@ -78,10 +78,10 @@ export default {
     justify-content: space-between
     @media (max-width: 600px)
       transform: scale(0.8)
-      width: 500px
+      width: 510px
     @media (max-width: 450px)
       transform: scale(0.6)
-      width: 500px
+      width: 510px
     span
       margin: 10px 10px
 </style>
