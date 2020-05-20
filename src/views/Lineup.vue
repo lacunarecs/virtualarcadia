@@ -1,42 +1,59 @@
 <template lang='pug'>
   .page
     .lineup
-      span Fytch
-      span CMC$
-      span Justin Mylo
-      span Burak Yeter
-      span Rival
-      span Robert Falcon
-      span BEAUZ, Egzod
-      span Arc North
-      span NIVIRO
-      span RudeLies
-      span LZRD
-      span Jinco
+      span AXEN
       span Anikdote
-      span IZECOLD
-      span Miles Away
-      span Uplink
-      span Galvanic
-      span Xavier Dunn
-      span Jey Vazz
-      span Debris
-      span Beatcore
-      span Snareskin
-      span Two Can
-      span Levitate
-      span Bad Decisions
-      span Rosenfeld
-      span N3wport
-      span Paul Flint
-      span Tomatow
-      span JFARR
-      span Charles B
-      span Fixl
       span Annie Sollange
-      span Triple M
-      span Ehallz
+      span Arc North
+      span Atlast
+      span BEAUZ
+      span Beatcore
       span Biometrix
+      span Burak Yeter
+      span CMC$
+      span Charles B
+      span EQRIC
+      span Egzod
+      span Ehallz
+      span Fixl
+      span Fox Stevenson
+      span Fytch
+      span Galvanic
+      span Geoxor
+      span Holly
+      span JFARR
+      span Jinco
+      span Justin Mylo
+      span Kastra
+      span LEVITATE
+      span Lammer
+      span Lizzy Jane
+      span Loopers
+      span Miles Away
+      span N3wport
+      span NIVIRO
+      span Nasko
+      span Omri
+      span PLS&TY
+      span Papercut
+      span Paul Flint
+      span Robby East
+      span Robert Falcon
+      span Rosenfeld
+      span RudeLies
+      span Snareskin
+      span Steff Da Campo
+      span Synymata
+      span TELYKast
+      span Teminite
+      span The Him
+      span Todd Helder
+      span Tomatow
+      span Triple M
+      span Two Can
+      span Uplink
+      span Voost
+      span xChenda
 </template>
 
 <script>
@@ -51,7 +68,7 @@ export default {
   flex-direction: column
   align-items: center
   .lineup
-    width: 550px
+    width: 562px
     text-transform: uppercase
     font-weight: 600
     font-size: 18px

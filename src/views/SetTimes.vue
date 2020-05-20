@@ -2,20 +2,21 @@
 .page
   .tz
     //- p {{ tz.label }}
-    vSelect.tz-select(
-      v-model='tz'
-      :options='timezones'
-      :clearable='false'
-      ref='select'
-    )
-      template(#open-indicator='{ attributes }')
-        span(v-bind='attributes')
-          Edit2Icon.edit-icon(size='1x' @click='console.log($refs.select)')
-  .set-times
-    .col(v-for='day in setTimesByDay')
-      h1 {{ day.weekday }}
-      template(v-for='setTime in day.setTimes')
-        SetTime(:artist='setTime.artist' :time='setTime.time')
+    p TO BE ANNOUNCED SHORTLY
+  //-   vSelect.tz-select(
+  //-     v-model='tz'
+  //-     :options='timezones'
+  //-     :clearable='false'
+  //-     ref='select'
+  //-   )
+  //-     template(#open-indicator='{ attributes }')
+  //-       span(v-bind='attributes')
+  //-         Edit2Icon.edit-icon(size='1x' @click='console.log($refs.select)')
+  //- .set-times
+  //-   .col(v-for='day in setTimesByDay')
+  //-     h1 {{ day.weekday }}
+  //-     template(v-for='setTime in day.setTimes')
+  //-       SetTime(:artist='setTime.artist' :time='setTime.time')
 </template>
 
 <script>

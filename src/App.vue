@@ -5,9 +5,9 @@
     //- p.logo - Online Music Festival -
     #nav
       router-link(to='/') HOME
+      a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target='_blank') DONATE
       router-link(to='/set-times') SET TIMES
       router-link(to='/lineup') LINEUP
-      a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target='_blank') DONATE
       router-link(to='/giveaway') GIVEAWAY
     router-view.router-view
 </template>

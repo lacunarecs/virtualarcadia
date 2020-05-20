@@ -1,11 +1,15 @@
 <template lang='pug'>
 div
-  h1 Razer Giveaway
-  p Donate 20$ or more and get a chance of winning one of 5 Razer Hammerhead True Wireless Earbuds.
-  //- a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target='_blank')
-  //-   button(v-if='!continued' type='button') DONATE
+  //- h1 Razer Giveaway
+  //- p Donate 20$ or more and get a chance of winning one of 5 Razer Hammerhead True Wireless Earbuds.
+  img(src='@/assets/razer-giveaway.jpg')
+  br
+  a(href='http://rzr.to/virtualarcadia')
+    p.hammerhead-link Click here to check out the Razer Hammerhead True Wireless
   a(href='https://gleam.io/zMdsl/virtual-arcadia-razer-giveaway' target='_blank')
     button(v-if='!continued' type='button') ENTER
+  //- a(href='https://www.flipcause.com/secure/donate/Nzc4Njg=/individual/44748' target='_blank')
+  //-   button(v-if='!continued' type='button') DONATE
   //- button(v-if='!continued' type='button' @click='continued = true') CONTINUE
   //- input.text-field(v-if='continued' v-model='email' type='text' name='email' placeholder='Email' required)
   //- input.button(@click='submit()' v-if='continued' type='submit' value='ENTER')
@@ -22,7 +26,15 @@ div
 // }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+img
+  max-width: 400px
+p.hammerhead-link
+  max-width: 280px
+  color: white
+  text-decoration: underline #ffffff
+  &:hover
+    text-decoration: none
 p
   max-width: 400px
   margin: auto
