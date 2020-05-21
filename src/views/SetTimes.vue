@@ -84,7 +84,7 @@ export default {
             { artist: 'BEAUZ',          time: 'May 23 9:00 PM' },
             { artist: 'Snareskin',      time: 'May 23 9:50 PM' },
             { artist: 'Arc North',      time: 'May 23 10:00 PM' },
-            { artist: 'Triple M',       time: 'May 23 10:30 PM' },
+            { artist: 'RudeLies',       time: 'May 23 10:30 PM' },
             { artist: 'Egzod',          time: 'May 23 11:00 PM' },
             { artist: 'NIVIRO',         time: 'May 24 12:00 AM' },
             { artist: 'The Him',        time: 'May 24 1:00 AM' },
@@ -113,13 +113,13 @@ export default {
             { artist: 'Uplink',         time: 'May 25 12:30 AM' },
             { artist: 'Loopers',        time: 'May 25 1:30 AM' },
             { artist: 'Ehallz',         time: 'May 25 2:30 AM' },
-            { artist: 'RudeLies',       time: 'May 25 3:00 AM' },
-            { artist: 'Lammer',         time: 'May 25 4:00 AM' },
-            { artist: 'Tomatow',        time: 'May 25 5:05 AM' },
-            { artist: 'FIXL',           time: 'May 25 5:35 AM' },
-            { artist: 'Papercut',       time: 'May 25 6:05 AM' },
-            { artist: 'Nasko',          time: 'May 25 6:35 AM' },
-            { artist: 'PLS&TY',         time: 'May 25 7:05 AM' }
+            { artist: 'Triple M',       time: 'May 25 3:00 AM' },
+            { artist: 'Lammer',         time: 'May 25 3:30 AM' },
+            { artist: 'Tomatow',        time: 'May 25 4:35 AM' },
+            { artist: 'FIXL',           time: 'May 25 5:05 AM' },
+            { artist: 'Papercut',       time: 'May 25 5:35 AM' },
+            { artist: 'Nasko',          time: 'May 25 6:05 AM' },
+            { artist: 'PLS&TY',         time: 'May 25 6:35 AM' }
           ]
         }
       ]
