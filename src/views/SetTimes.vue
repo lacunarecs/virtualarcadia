@@ -102,9 +102,9 @@ export default {
         },
         {
           setTimes: [
-            { artist: 'Fytch',          time: 'May 24 7:30 PM' },
-            { artist: 'Miles Away',     time: 'May 24 8:00 PM' },
-            { artist: 'JFARR',          time: 'May 24 8:30 PM' },
+            { artist: 'Miles Away',     time: 'May 24 7:30 PM' },
+            { artist: 'JFARR',          time: 'May 24 8:00 PM' },
+            { artist: 'Fytch',          time: 'May 24 8:30 PM' },
             { artist: 'Burak Yeter',    time: 'May 24 9:00 PM' },
             { artist: 'Anikdote',       time: 'May 24 10:00 PM' },
             { artist: 'Rosenfeld',      time: 'May 24 10:45 PM' },
