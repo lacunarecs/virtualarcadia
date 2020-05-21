@@ -37,6 +37,7 @@ export default {
   },
   data: function () {
     const tzGuess = moment.tz.guess(true)
+    // const tzGuess = 'Europe/Berlin'
     return {
       tz: {
         name: tzGuess,
@@ -129,7 +130,7 @@ export default {
 
         const todaysSetTimes = []
         for (const cestSetTime of day.setTimes) {
-          const cestTime = moment(cestSetTime.time, 'MMM D HH:mm A').year(2020)
+          const cestTime = moment.tz(cestSetTime.time, 'MMM D HH:mm', 'Europe/Oslo').year(2020)
           const localTime = cestTime.tz(this.tz.name)
           if (firstSetTime === '') firstSetTime = localTime
           todaysSetTimes.push({
