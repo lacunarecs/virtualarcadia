@@ -2,7 +2,7 @@
 .page
   .yt-container
     //- <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCQpQGT51tQbDQztiEH6hBcQ&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe src="https://player.twitch.tv/?channel=lacunarecs&parent=www.example.com"></iframe>
+    <iframe src="https://player.twitch.tv/?channel=lacunarecs&parent=virtularcadia.com"></iframe>
     p <a href='https://www.twitch.tv/lacunarecs' target='_blank'>Follow</a> on Twitch to be notified when streams start
 
   img(src='@/assets/poster.jpg')
