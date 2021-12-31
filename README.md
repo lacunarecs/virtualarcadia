@@ -1,7 +1,5 @@
 # virtual-arcadia
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d9ae5277-6ef6-4f42-b8bc-e80136d00ace/deploy-status)](https://app.netlify.com/sites/virtualarcadia/deploys)
-
 
 ## Project setup
 ```
